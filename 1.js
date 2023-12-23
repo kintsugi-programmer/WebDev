@@ -16,7 +16,7 @@ Comment
    - Control Flow (if statements, loops)
    - Functions
    - Objects and Arrays
-   - DOM Manipulation (in dom.html (which contains html with script ;0 ))
+   - DOM Manipulation (in 1a.html (which contains html with script ;0 ))
 */
 
 // variable

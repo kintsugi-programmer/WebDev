@@ -167,7 +167,7 @@ const numbers2 = [1, 2, 3];
 numbers2.push(4);
 
 // Case 3: Temporal dead zone
-console.log(a3); // ReferenceError: Cannot access 'a' before initialization
+//console.log(a3); // ReferenceError: Cannot access 'a' before initialization
 let a3 = 5;
 
 /*
@@ -207,7 +207,22 @@ class Animal {
     speak() {
         console.log(`${this.name} makes a sound.`);
     }
+
+    run(){console.log(`${this.name} run like a ${this.name}`);}
+
 }
+// ` vs '
+/*
+In JavaScript, the backtick (`) and single quote (') are both used to define strings, 
+but they have different purposes.
+Single quotes are traditionally used to define strings in JavaScript. 
+However, if you want to include a single quote within a string defined with single quotes, 
+you need to escape it with a backslash:
+
+The backtick, introduced in ECMAScript 6 (ES6), is used for template literals. 
+Template literals allow for embedded expressions and multiline strings:
+You can also include variables and expressions directly within a template literal:
+This is useful for creating more complex strings in a concise and readable way.*/
 
 // Extending a class
 class Dog extends Animal {
@@ -226,7 +241,7 @@ class MathOperations {
     }
 }
 
-const sum = MathOperations.add(3, 4);
+const sum1 = MathOperations.add(3, 4);
 
 // Case 2: Getters and setters
 class Circle {
@@ -246,30 +261,3 @@ class Circle {
 const myCircle = new Circle(5);
 console.log(myCircle.diameter); // Getter
 myCircle.diameter = 12; // Setter
-
-// Modules (Import /Export)
-// In file math.js
-export const sum = (a, b) => a + b;
-
-// In file app.js
-import { sum } from './math';
-console.log(sum(3, 4));
-
-// Case 1: Default exports
-// In file math.js
-const pi = 3.14;
-export default pi;
-
-// In file app.js
-import myPi from './math';
-console.log(myPi);
-
-// Case 2: Importing multiple exports
-// In file math.js
-export const sum = (a, b) => a + b;
-export const multiply = (a, b) => a * b;
-
-// In file app.js
-import { sum, multiply } from './math';
-console.log(sum(3, 4));
-console.log(multiply(3, 4));

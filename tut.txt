@@ -14,6 +14,7 @@ Certainly! If you're looking to get started with React, it's essential to have a
    - Functions
    - Objects and Arrays
    - DOM Manipulation
+   - Ternary operators
 
 2. **ES6 and Modern JavaScript:**
    - Arrow functions

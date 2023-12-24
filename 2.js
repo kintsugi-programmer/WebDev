@@ -58,13 +58,44 @@ It's essential for JavaScript developers to stay up-to-date with modern practice
 the full capabilities of the language.
    */
 
+// Spread Syntax Example
+// It is used to expand elements of an iterable (like an array) or properties of an object.
+const array1 = [1, 2, 3];
+const array2 = [...array1, 4, 5, 6]; // Spread elements of array1 into array2
+console.log(array2); // Output: [1, 2, 3, 4, 5, 6]
+
+const obj1 = { key1: 'value1', key2: 'value2' };
+const obj2 = { ...obj1, key3: 'value3' }; // Spread properties of obj1 into obj2
+console.log(obj2); // Output: { key1: 'value1', key2: 'value2', key3: 'value3' }
+
+// Rest Syntax Example
+// It is used to collect the remaining elements of an array or properties of an object into a single variable.
+const [first1, second1, ...rest] = [1, 2, 3, 4, 5];
+console.log(first1); // Output: 1
+console.log(second1); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+
+const { key1, ...restObj } = { key1: 'value1', key2: 'value2', key3: 'value3' };
+console.log(key1); // Output: 'value1'
+console.log(restObj); // Output: { key2: 'value2', key3: 'value3' }
+
 
 // Traditional function
 function add(a, b) {
    return a + b;
 }
 
+
 function Multi(a,b){return a*b;}
+
+// Anonymous Function
+<button
+  onClick={() => {
+    console.log("Hi");
+  }}
+>
+  Click me
+</button>;
 
 // Arrow function
 const addArrow = (a, b) => a + b;
@@ -87,6 +118,9 @@ const squaredNumbers = numbers.map(x => x * x);
  of the numbers array and apply a function to each element, 
  creating a new array based on the results.
 */
+
+// one more Eg:
+const MyComponent = () => {return <div></div>;};
 
 // Array destructuring
 const numbers1 = [1, 2, 3];

@@ -17,6 +17,7 @@ Comment
    - Functions
    - Objects and Arrays
    - DOM Manipulation (in 1a.html (which contains html with script ;0 ))
+   - Ternary operators
 */
 
 // variable
@@ -180,3 +181,28 @@ let filteredFruits = fruits.filter(function (fruit) {
 // Displaying the filtered array of fruits after excluding "orange".
 console.log("Filtered Fruits (excluding 'orange'):", filteredFruits);
 
+// Ternary operators
+// condition ? expression_if_true : expression_if_false;
+let age = 20;
+let message2 = (age >= 18) ? 'You are an adult' : 'You are a minor';
+
+console.log(message2);
+// Output: 'You are an adult' (since age is 20, which is greater than or equal to 18)
+
+let tier = 1;
+let college = (tier=1)?'Premium College': (tier=2)?'Decent College':'Bekar College';
+console.log(college);
+
+let num1 = 10;
+
+// Check if num1 is greater than 0
+let result = (num1 > 0) 
+  ? 'Positive' // If true, set result to 'Positive'
+  : (num1 < 0) 
+    ? 'Negative' // If false, check if num1 is less than 0. If true, set result to 'Negative'
+    : 'Zero'; // If false, set result to 'Zero'
+
+console.log(result);
+// Output: 'Positive' (since num1 is 10, which is greater than 0)
+
+const Component = () => {return age>10?<div>Bhati</div>:<div>Bali</div>;};

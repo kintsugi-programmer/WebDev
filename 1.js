@@ -31,7 +31,7 @@ let text = "Some text"; // String
 let isTrue = true; // Boolean
 let data; // Undefined
 let myArray = [1, 2, 3]; // Array
-let myObject = { key: "value" }; // Object
+let myObject = { key: "value" }; // Object (dict. in python)
 let persona = { name: "Bob", age: 30 }; // Object
 
 // Print the variable
@@ -130,8 +130,31 @@ let person = {
     },
   };
 
+const age_person = person.age;
+const {a1,a2,a3} = person ; //deconstruct (easy way to assign stuff) 
+
 let car= {model: "Swift Dezire",company:"Maruti Suzuki",desc:function(){return this.model+" by "+this.company;}};
   
+
+const b1 = "hi";
+const b2 = "hola";
+const b = {
+  b1, //it means b1 = b1 ;
+  b2, //b2 = b2 ;
+
+};
+
+// ... Spread Operator (means keep everything form datastructures(obj,arr,etc))
+let person2 = {...person,firstName:"Daisy"};
+// above means that person2 will have exact all stuff of person and firstName is Daisy
+const name2=[1,2,3];
+const name3=[...name2,4]; //it means name3 will have exact all stuff of name2 and also an entry of 4
+ 
+
+
+
+
+
 // Accessing object properties and calling a method
 console.log(person.firstName); // John
 console.log(person.fullName()); // John Doe

@@ -294,6 +294,7 @@ class MyComponent extends Component {
 }
 
 export default MyComponent;
+
 ```
 
 These are some basic concepts to get you started with React. From here, you can explore more advanced topics like React Router for navigation, Redux for state management, and useEffect for handling side effects. The [official React documentation](https://reactjs.org/docs/getting-started.html) is an excellent resource for diving deeper into React.

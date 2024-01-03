@@ -117,6 +117,7 @@ Key features of Node.js include:
 
 Node.js is commonly used to build various types of applications, including web servers, API servers, real-time applications (such as chat applications or online gaming platforms), and command-line tools. It has gained popularity due to its performance, scalability, and the ability to use JavaScript on both the client and server sides of web development.
 
+react_install_guide.txt
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc

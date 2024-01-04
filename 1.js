@@ -2,6 +2,8 @@
 
 // Single Line Comment
 
+//JavaScript is your browser has a built-in execution environment.
+
 /*
 Multi
 -
@@ -90,11 +92,86 @@ function test(){
     console.log("test done ;)");
 }
 
+
 // Function call
 greet(name);
 
+//Anonymous Function
+var greet2 = function(usrname){return "Hello "+usrname+" in this tutorial program ";};
+
+//Immediately Invoked Function Expression (IIFE)
+const result1 = (function (usrname) {return "Hello "+usrname+" in this tutorial program ";})("Siddhant Bali"); 
+console.log(result1);
+
+//A powerful feature of JavaScript is you can actually create functions within other functions and even return them!
+function createFunction() {
+  return f;
+  function f(a, b) {
+      const sum = a + b;
+      return sum;
+  }
+}
+const f = createFunction();
+console.log(f(3, 4)); // 7
+
+// Closures : A closure is a function that has access to its outer function scope even after the outer function has returned. This means a closure can remember and access variables and arguments of its outer function even after the function has finished. 
+function createAdder(a) {
+  function f1(b) {
+      const sum = a + b;
+      return sum;
+  }
+  return f1;
+}
+const f1 = createAdder(3);
+console.log(f(4)); // 7
+
+
 // Arrow Functions (ES6)
 let Multiplication = (a,b) => a*b;
+
+// Arrow Function's Omit Return {f2 and f3 are same}
+const f2 = (a, b) => {
+  const sum = a + b;
+  return sum;
+};
+console.log(f2(3, 4)); // 7
+
+const f3 = (a, b) => a + b;
+console.log(f3(3, 4)); // 7
+
+/*
+Functions vs arrow functions
+
+There are 3 major differences between arrow syntax and function syntax.
+
+More minimalistic syntax. 
+This is especially true for anonymous functions and single-line functions. For this reason, this way is generally preferred when passing short anonymous functions to other functions.
+
+No automatic hoisting. 
+You are only allowed to use the function after it was declared. This is generally considered a good thing for readability.
+
+Can't be bound to this, super, and arguments or be used as a constructor. 
+These are all complex topics in themselves but the basic takeaway should be that arrow functions are simpler in their feature set. You can read more about these differences here.
+
+*/
+
+// Rest Arguments ... (ES6) (means keep everything in an array)
+function f11(...args) {
+  const sum = args[0] + args[1];
+  return sum;
+}
+console.log(f11(3, 4)); // 7
+
+function log(inputFunction) {
+  return function(...args) {
+      console.log("Input", args);
+      const result = inputFunction(...args);
+      console.log("Output", result);
+      return result;
+  }
+}
+const f111 = log((a, b) => a + b);
+f(1, 2); // Logs: Input [1, 2] Output 3
 
 // Conditional Statements
 // if,else,else if
